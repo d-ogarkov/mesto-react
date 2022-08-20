@@ -72,6 +72,10 @@ class Api {
     });
   }
 
+  changeLikeCardStatus(id, isLiked) {
+    return isLiked ? this.setLike(id) : this.unsetLike(id);
+  }
+
   setAvatar({ avatar }) {
     return this._sendRequest('users/me/avatar', {
       method: 'PATCH',
