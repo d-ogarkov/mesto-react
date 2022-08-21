@@ -18,7 +18,7 @@ export default function Main({onEditAvatar, onEditProfile, onAddPlace, cards, on
       </section>
       <section className="elements">
         <ul className="elements__list">
-          {cards.map((card, i) => (
+          {cards.map((card) => (
             <Card card={card} key={card._id} onCardClick={onCardClick} onCardLike={onCardLike} onCardDelete={onCardDelete} />
           ))}
         </ul>
